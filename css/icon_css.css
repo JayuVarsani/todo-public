@@ -1,0 +1,54 @@
+body{
+    background-color: burlywood;
+}
+/* div:hover 
+{
+    background-color: brown;
+    /* color: white;    */
+    /* padding: 10px; */
+/* }  */
+p{
+    display: none;
+}
+div:hover p{
+    display: block;
+    background-color: black;
+    color:white;
+    height: 30px;
+    width: 170px;
+}
+p::first-letter
+{
+    color:red;
+    font-size: x-large;
+}
+p::first-line
+{
+    color:cadetblue;
+    font-variant: small-caps;
+}
+::marker
+{
+    color:red;
+}
+::selection
+{
+    color: black;
+    background-color:coral;
+}
+a
+{
+    background-color: brown;
+    padding: 15px 25px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+a.hover
+{
+    background-color: green;
+}
+a.active
+{
+    background-color: rebeccapurple;
+}

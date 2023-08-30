@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/FavIcon/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/FavIcon/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/FavIcon/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="./img/FavIcon/favicon_package_v0.16/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="tab-1">
+            <div >
+                <i class="fa fa-bars" onclick="openNav()" id="openNav"></i>
+        
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                style="background-color: transparent  !important; color: #2e2e38; position: absolute; top: 5px !important; padding:0; right: 0;"><i class="fa fa-close"
+                    style="font-size:24px"></i>
+            </a>
+        </div>
+            <!-- <p>
+                    <input type="text" placeholder="Search by Heading..." oninput="search_func()" id="myInput"
+                        style="  box-shadow: 2px 4px 6px -3px rgba(0,0,0,.5);">
+                </p> -->
+            <a href="#" class="right active" onclick="dashboard()"> Dashboard</a>
+            <a href="#" class="right" onclick="addTask()">Add Task </a>
+            <a href="#" class="right" onclick="alltask()">Show All Task</a>
+            <!-- <a href="#" class="right" onclick="completedTask()">Complete Task</a> -->
+            <a href="#" class="right" onclick="remaining()"> Remaining Tasks</a>
+            <a href="#" class="right" onclick="completed()">Completed Tasks</a>
+            <!-- <a href="#" class="right" onclick="filter()"> Filter </a> -->
+            <!-- <a href="#" class="right" onclick="todayTask()"> Today's Task </a> -->
+            <a href="#" class="right" onclick="importantTask()"> Important's Task </a>
+            <a href="/Login.html" class="right r1" style="bottom: 0px;" onclick="signOut()"> Sign-Out </a>
+        </div>
+        <div id="tab-2">
+            <div class="main" id="task-form">
+                <!-- <div id="total_task">
+                    <a href="#" id="total_task_number" style="text-decoration: none; color:#dd62ff "></a>
+                </div> -->
+                <div id="showClick">
+                    <a href="#" id="popup box" style="text-decoration: none;"></a>
+                </div>
+                <div id="dashboardArea">
+                    <!-- <a href="#" style="text-decoration: none;" onclick="completed()" > -->
+                    <div id="work">
+                        <p>Task Completed</p>
+                        <h2>2 / 7</h2>
+                    </div>
+                    <!-- </a> -->
+                    <!-- <a href="#" style="text-decoration: none;" onclick="remaining()"> -->
+                    <div id="work1">
+                        <p>Today's Task</p>
+                        <h2>2 / 7</h2>
+                    </div>
+                    <!-- </a> -->
+                </div>
+                <div id="to-do">
+                    <div id="add-field">
+                        Today:
+                    </div>
+                    <div class="opt-1">
+                        <form id="add-task">
+                            <div class="form_picture">
+                                <img src="img/to-do-list-apps.png" alt="todo-img"
+                                    style="width: 100%;border-radius: 15px 0px 0px 15px;">
+                            </div>
+                            <div class="form_data">
+                                <h2 id="todoNm">Add Task</h2>
+                                <label for="add-date">Date:</label>
+                                <span>
+                                    <input type="date" id="add-date" placeholder="dd/mm/yyyy"
+                                        onfocus="(this.type='date')" required>
+                                </span>
+                                <label for="add-heading">Title:</label>
+                                <span>
+                                    <input type="text" id="add-heading" name="add-heading" placeholder="Add Task"
+                                        required></span>
+                                <label for="add-details">Details:</label>
+                                <span>
+                                    <textarea name="details" id="add-details" name="add-details" cols="25" rows="5"
+                                        placeholder="Add Description"></textarea>
+                                </span>
+                                <div class="click"> <button type="button" class="btn" id="add-btn"> Add
+                                    </button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="task_popup">
+                <a href="javascript:void(0)" class="closebtn" onclick="closePopup()" id="closebtn"><i
+                        class="fa fa-close" style="font-size:24px;"></i></a>
+                <h3>Want to delete this Task ?</h3>
+                <span><button onclick="closePopup()">Close</button>
+                    <button style="background-color: #696cff; color: white;" id="dlt">Delete</button></span>
+            </div>
+            <div id="filterBtn">
+                <button onclick="filter()"> <i class="fa fa-filter"
+                        style="font-size:20px; color: #48578e; width: 20px;"></i> Filter</button>
+            </div>
+            <div id="details_container">
+            </div>
+            <div id="date_filter">
+
+                <label for="date_start"><b>Start Date:</b></label>
+                <input type="date" name="date1" id="date_start" oninput="filter()">
+                <span>
+                    <label for="date_end"><b> End Date:</b></label>
+                    <input type="date" name="date2" id="date_end" oninput="filter()">
+                </span>
+                <button onclick="clearFilter()">Clear Filter</button>
+            </div>
+        </div>
+        <div class="nav-bar" id="nav">
+            <input type="text" name="Search" id="myInput" placeholder="Search Here" onkeyup="search_func()">
+            <div id="profile_img"></div>
+            <span class="profile-icn" id="profile_nm">
+                <!-- <img src="/img/profile.jpg" alt="profile"> -->
+            </span>
+        </div>
+    </div>
+    </div>
+    <script src="/js/dashboard.js ">
+
+    </script>
+</body>
+
+</html>

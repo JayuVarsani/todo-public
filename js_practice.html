@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>JavaScript Practice</title>
+</head>
+
+<body>
+    <p>Click to see JavaScript</p>
+
+    <button type="button" onclick="myfunc()">Click Me</button>
+    <p id="demo">Hello</p>
+
+    <script>
+        function myfunc() {
+            document.getElementById("demo").style.fontSize = "25px";
+            document.getElementById("demo").style.color = "red";
+        }
+    </script>
+    <form>
+        <p>Select Favourite Language:</p>
+        <input type="radio" id="rad" name="fax-lan">
+        <label for="rad" name="fax-lan">HTML</label><br>
+        <input type="radio" id="rad" name="fax-lan">
+        <label for="rad" name="fax-lan">CSS</label><br>
+        <input type="radio" id="rad" name="fax-lan">
+        <label for="rad" name="fax-lan">JS</label><br>
+        <p>CheckBox:</p>
+        <input type="checkbox" name="checkbox" id="che">
+        <label for="che">chekbox-1</label><br>
+        <input type="checkbox" name="checkbox1" id="che">
+        <label for="che">checkbox-2</label>
+        <input type="checkbox" name="checkbox-3" id="che">
+        <p>Select Item:</p>
+        <select name="ip" id="ip" multiple>select
+            <option value="car">car</option>
+            <option value="bike">bike</option>
+            <option value="cycle">cycle </option>
+        </select>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        <input type="submit" name="submit" id="submit" onclick="alert('Your data is submitted')">
+<input list="select">
+    <datalist id="select">
+        <option value="Internet Explorer"></option>
+        <option value="UC Browser"></option>
+        <option value="Chrome"></option>
+</datalist>
+<input type="search" placeholder="search">
+<input type="text" name="ii" id="ii" required>
+<input type="submit" name="submit" id="submit" onclick="alert('Your data is submitted')">
+
+    </form>
+
+</body>
+
+</html>

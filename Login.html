@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" type="image/x-icon" href="/img/icon.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/FavIcon/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/FavIcon/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/FavIcon/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="./img/FavIcon/favicon_package_v0.16/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="left">
+          <h1>Simple Daily ToDo List</h1> 
+      <!--  <ul>
+            <li>
+                <h4>Log In to Dashboard</h4>
+            </li>
+            <li>
+                <h4>Add Your Task's</h4>
+            </li>
+            <li>
+                <h4>View your all Task's</h4>
+            </li>
+            <li>
+                <h4>Edit or Remove Task</h4>
+            </li>
+            <li>
+                <h4>Save Your Task's Permanently </h4>
+            </li>
+        </ul> -->
+    </div>
+    <div id="right">
+        <div id="loginDiv">
+            <form onsubmit="LoggedIN()" id="myForm" >
+                <h1 style="text-align: center;"> Login </h1>
+                <div id="username">
+                    <span>
+                        <label><b> Username:</b></label>
+                        <input type="text" class=ip id="loggin_username" required></span>
+                </div>
+                <div id="username">
+                    <span>
+                        <label><b> Password:</b></label>
+                        <input type="password" class="ip" id="loggin_password" required>
+                    </span>
+                    <h4 id="h4"></h4>
+                </div>
+                <div class="sub">
+                    <input type="submit" id="sub_but" title="Click To Submit" value="LogIn">
+                </div>
+                <!-- <p>Forget Password?</p> -->
+                <p>Create an Account? <b onclick="showRegi()" style="cursor: pointer;">Click Here</b></a></p>
+            </form>
+        </div>
+
+        <div id="registrationDiv" >
+            <form onsubmit="registerd()" id="regi_form">
+                <h1 style="text-align: center;"> Registration </h1>
+                <div id="username">
+                    <span>
+                        <label><b> Username:</b></label>
+                        <input type="text" class=ip id="user" required></span>
+                </div>  
+                <div id="username">
+                    <span>
+                        <label><b> Password:</b></label>
+                        <input type="password" class="ip" id="password" required>
+                    </span>
+                </div>
+                <div id="username">
+                    <span>
+                        <label><b> Email:</b></label>
+                        <input type="email" class=ip id="Email" required></span>
+                </div>
+                <div id="username">
+                    <span>
+                        <label><b> Mobile No:</b></label>
+                        <input type="tel" class=ip id="Mobile" required></span>
+                        <h4 id="err_msg"></h4>
+                </div>
+
+                <div class="sub">
+                    <input type="submit" id="register_but" title="Click To Submit" value="Sign Up">
+                </div>
+                <p>Already Have An Account? <b onclick="showLogin()">LogIn</b></p>
+            </form>
+        </div>
+        <script src="/js/login.js"></script>
+</body>
+
+</html>

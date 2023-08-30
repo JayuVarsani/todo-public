@@ -1,0 +1,216 @@
+* {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+h1 {
+  font-size: 50px;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    padding: 25px   ;
+    
+}
+.left h1{
+  margin-top: 15%;
+}
+/* #myform h1{
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    text-align: center;
+} */
+body {
+  /* background-image: url("/img/pexels.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: 80px 0px 0px 20px; */
+  /* width: 70%; */
+  background-color: #f0f0f0;
+  /* background-color: #696cff; */
+  display: flex;
+  color: white;
+  /* align-items: baseline; */
+  /* background-image: url(/img/pexel.webp);
+  background-repeat: no-repeat;
+    background-size: 100% 100%; */
+}
+
+#right {
+  background-color: white;
+  /* float: right; */
+  width: 100%;
+  transition: 0.3px;
+  border-radius: 15px;
+  margin-left: 20px;
+  border: 1px solid rgb(202, 197, 197);
+  /* background-image: url(/img/wall.avif);
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+}
+#loginDiv {
+  margin: auto;
+  margin-top: 15%;
+  background-color: white;
+  backdrop-filter: blur(30px);
+  /* box-shadow: 0px 2px 20px 5px; */
+  /* box-shadow: 0 0 0.375rem 0.25rem rgba(161, 172, 184, 0.15); */
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  width: 40%;
+  display: block;
+  color: black;
+}
+.sub {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#username label {
+  width: 100%;
+  display: inherit;
+  position: absolute;
+  /* color: white; */
+}
+
+#username {
+  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 8%;
+}
+
+.ip {
+  width: 80%;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  /* border-radius: 10px;  */
+  height: 25px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  margin-top: 5%;
+}
+
+#sub_but {
+  margin: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* color: white; */
+  background-color: transparent;
+  box-shadow: 0 0 0.375rem 0.25rem rgba(161, 172, 184, 0.15);
+  border-radius: 5px;
+  border: 1px;
+  height: 40px;
+  width: 210px;
+  background-color:#ffcc00;
+  font-weight: bold;
+}
+#submit {
+  color: white;
+  /* color: darkcyan; */
+  width: 10px;
+}
+form {
+  align-items: center;
+}
+a {
+  color: black;
+}
+
+.left {
+  /* margin: 100px; */
+  width: 80%;
+  display: inline-block;
+  align-items: center;
+  border-radius: 15px;
+  background-color: black;
+  height: 100%;
+  background-image: url(/img/laptop.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-right: 30px;
+
+}
+#registrationDiv {
+  margin: auto;
+  margin-top: 15%;
+  background-color: white;
+  backdrop-filter: blur(30px);
+  /* box-shadow: 0px 2px 20px 5px; */
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0px;
+  padding-bottom: 50px;
+  width: 40%;
+  display: none;
+  color: black;
+}
+ul {
+  /* list-style-type: square; */
+  list-style-image: url(/img/check\ \(3\).svg);
+  /* background-size:10px ; */
+}
+ul::before
+{
+  height: 10px;
+  width: 10px;
+}
+#registrationDiv p {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+#loginDiv p {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+#h4 {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px 74px 0px 0px;
+  margin-top: 10px;
+  background: rgba(255, 0, 0, 0.1);
+  color: #c62828;
+}
+#register_but {
+  margin: inherit;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* color: white; */
+  background-color: transparent;
+  box-shadow: 0 0 0.375rem 0.25rem rgba(161, 172, 184, 0.15);
+  border-radius: 5px;
+  border: 1px;
+  height: 40px;
+  width: 210px;
+  background-color:#ffcc00;
+  font-weight: bold;
+}
+#err_msg {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px 74px 0px 0px;
+  margin-top: 10px;
+  background: rgba(255, 0, 0, 0.1);
+  color: #c62828;
+}

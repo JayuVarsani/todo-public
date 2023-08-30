@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Card Example</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Card Example</h1>
+    
+    <form id="myForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <button type="button" onclick="addCard()">Add Card</button>
+    </form>
+    
+    <div id="cardContainer">
+    </div>
+    
+    <script>
+        function addCard() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            
+            if (firstName && lastName) {
+                var cardContainer = document.getElementById("cardContainer");
+                
+                var card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <h3>${firstName} ${lastName}</h3>
+                    <p>First Name: ${firstName}</p>
+                    <p>Last Name: ${lastName}</p>
+                    <button onclick="editCard(this)">Edit</button>
+                    <button onclick="deleteCard(this)">Delete</button>
+                `;
+                
+                cardContainer.appendChild(card);
+                
+                // Clear form fields
+                document.getElementById("myForm").reset();
+            }
+        }
+        
+        function editCard(button) {
+            var card = button.parentNode;
+            var firstName = card.querySelector("h3").textContent.split(" ")[0];
+            var lastName = card.querySelector("h3").textContent.split(" ")[1];
+            
+            document.getElementById("firstName").value = firstName;
+            document.getElementById("lastName").value = lastName;
+            
+            cardContainer.removeChild(card);
+        }
+        
+        function deleteCard(button) {
+            var card = button.parentNode;
+            cardContainer.removeChild(card);
+        }
+    </script>
+</body>
+</html>

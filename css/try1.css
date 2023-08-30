@@ -1,0 +1,20 @@
+body
+{
+    background-color: #4db2ec;
+}
+.container
+{
+    background-color: white;
+    margin: 100px;
+    padding: 30px;
+}
+.col-1
+{
+    display: inline-block;
+    width: 33%;
+}
+.col-1 label
+{
+    display: inline-block;
+    width: 100%;
+}

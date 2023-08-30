@@ -1,0 +1,62 @@
+.container
+{
+    background-color: chocolate;
+    color: red;
+    text-align: center;
+    border-radius: 50px;
+
+}
+#login_center
+{
+    /* background-color: aqua; */
+    height:1500px;
+}
+.rel
+{
+    position: relative;
+    right: 0;
+    bottom: 0;
+    border-color: green;
+    border: 3px solid black;    
+}
+.abs
+{
+position: absolute;
+right :0;
+bottom: 0;
+border-color: green;
+border: 3px solid black;    
+}
+.static
+{
+    position: static;
+    border-color: green;
+    border: 3px solid black;    
+}
+.sticky
+{
+    position: sticky;
+    /* background-color: #cae8ca;
+    border: 2px solid #4CAF50; */
+    top :0;
+}
+.fix
+{
+    position: fixed;
+    bottom:0;
+    right: 8px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    background-color: aqua;
+}
+.main 
+{
+    border: 3px solid black;
+    width: 300px;
+    height: 300px;
+    display: flex;
+}
+body
+{
+    background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+}
